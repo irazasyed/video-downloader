@@ -102,7 +102,7 @@ abstract class Provider implements ProviderInterface
         $status = $response->getStatusCode();
 
         if($status === 200) {
-            $this->body = $response->getBody();
+            return $this->body = $response->getBody();
         }
 
         throw new VideoDownloaderException('Something went wrong, HTTP Status Code Returned: '.$status);
