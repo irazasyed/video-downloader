@@ -85,6 +85,23 @@ class Factory
     {
         return $this->provider->getVideoInfo($url);
     }
+    
+    /**
+     * Download remote file from server
+     * and save it locally using HTTP Client.
+     *
+     * @param string $url         The URL to Remote File to Download.
+     *
+     * @param string $dstFilename Destination Filename (Accepts File Path too).
+     *
+     * @param bool   $isAsyncRequest
+     *
+     * @return string
+     */
+    public function download($url, $dstFilename, $isAsyncRequest = false)
+    {
+        return $this->provider->download($url);
+    }
 
     /**
      * @param null $provider
