@@ -1,0 +1,46 @@
+{
+    "name": "irazasyed/video-downloader",
+    "description": "Video Downloader for Facebook",
+    "keywords": [
+        "facebook video downloader",
+        "video downloader",
+        "fb video downloader",
+        "laravel fb video downloader"
+    ],
+    "homepage": "https://github.com/irazasyed/video-downloader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Syed Irfaq R.",
+            "email": "syed+gh@lukonet.com",
+            "homepage": "https://github.com/iRazaSyed",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Irazasyed\\VideoDownloader\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Irazasyed\\VideoDownloader\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
