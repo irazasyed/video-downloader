@@ -49,6 +49,10 @@ If you discover any security related issues, please email syed+gh@lukonet.com in
 - [Syed Irfaq R.][link-author]
 - [All Contributors][link-contributors]
 
+## Disclaimer
+
+This project and its author is neither associated, nor affiliated with Facebook in anyway. Use of this project is at your own risk. The author of this project will not be held liable for the usage of this project. This is simply an experimental project. It is highly recommended to go through the [Automated Data Collection Terms](https://www.facebook.com/apps/site_scraping_tos_terms.php) of Facebook. See License section for more details.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
