@@ -111,11 +111,11 @@ abstract class Provider implements ProviderInterface
 
     /**
      * Download remote file from server
-     * and save it locally using GuzzlePHP.
+     * and save it locally using HTTP Client.
      *
-     * @param string $url         The URL to Remoate File to Download.
+     * @param string $url         The URL to Remote File to Download.
      *
-     * @param string $dstFilename Destination Filename (Accepts File Path too)
+     * @param string $dstFilename Destination Filename (Accepts File Path too).
      *
      * @param bool   $isAsyncRequest
      *
