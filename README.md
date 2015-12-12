@@ -21,9 +21,45 @@ $ composer require irazasyed/video-downloader
 
 ## Usage
 
+### getVideoInfo
+
+Get Video Info By Video ID:
 ``` php
 $downloader = new Irazasyed\VideoDownloader\Factory('facebook');
-$videoInfo = $downloader->getVideoInfo('<FB Video ID>');
+$videoInfo = $downloader->getVideoInfo('10154015752566729');
+```
+
+Get Video Info By URL:
+``` php
+$videoUrl = 'https://www.facebook.com/facebook/videos/vl.515712155263726/10154015752566729/?type=1&theater';
+
+$downloader->getVideoInfo($videoUrl);
+```
+
+Example Response:
+```php
+$response = [
+  "title" => "Facebook" // Video Title if exists, Page Title otherwise.
+  "description" => "Is seeing the world on your mind?" // Video Caption
+  "owner" => "Facebook" // Uploader Name
+  "created_time" => "1441004460" // Unix Time
+  "hd_link" => "<HD MP4 LINK>"
+  "sd_link" => "<SD MP4 LINK>"
+];
+```
+
+#### Supported URL Types (HTTP/HTTPS)
+- http://www.facebook.com/video.php?v=VIDEO_ID
+- http://www.facebook.com/photo.php?v=VIDEO_ID
+- http://www.facebook.com/video/video.php?v=VIDEO_ID
+- https://www.facebook.com/USER_NAME/videos/USER_ALBUM/VIDEO_ID/?type=2&theater 
+- https://www.facebook.com/USER_NAME/videos/VIDEO_ID/?pnref=story
+
+### download
+
+```php
+$isAsyncRequest = true;
+$downloader->download('path/to/src/file', '/path/to/destination/filename.mp4', $isAsyncRequest);
 ```
 
 ## Change log
