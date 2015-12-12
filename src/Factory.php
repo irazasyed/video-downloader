@@ -72,6 +72,19 @@ class Factory
             )
         );
     }
+    
+    /**
+     * Gets Video Download Links with Meta Data from the Provider.
+     * Returns HD & SD Quality Links.
+     *
+     * @param $url
+     *
+     * @return array
+     */
+    public function getVideoInfo($url)
+    {
+        return $this->provider->getVideoInfo($url);
+    }
 
     /**
      * @param null $provider
