@@ -14,7 +14,7 @@ use Irazasyed\VideoDownloader\Exceptions\VideoDownloaderException;
  *
  * @package Irazasyed\VideoDownloader\Providers
  */
-abstract Provider implements ProviderInterface
+abstract class Provider implements ProviderInterface
 {
     /**
      * @var Client
