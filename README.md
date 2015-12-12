@@ -21,15 +21,15 @@ $ composer require irazasyed/video-downloader
 
 ## Usage
 
-### getVideoInfo
+### getVideoInfo Method:
 
-Get Video Info By Video ID:
+Get Video Info By **Video ID**:
 ``` php
 $downloader = new Irazasyed\VideoDownloader\Factory('facebook');
 $videoInfo = $downloader->getVideoInfo('10154015752566729');
 ```
 
-Get Video Info By URL:
+Get Video Info By **URL**:
 ``` php
 $videoUrl = 'https://www.facebook.com/facebook/videos/vl.515712155263726/10154015752566729/?type=1&theater';
 
@@ -48,18 +48,18 @@ $response = [
 ];
 ```
 
-#### Supported URL Types (HTTP/HTTPS)
+#### Supported URL Types (HTTP/HTTPS):
 - http://www.facebook.com/video.php?v=VIDEO_ID
 - http://www.facebook.com/photo.php?v=VIDEO_ID
 - http://www.facebook.com/video/video.php?v=VIDEO_ID
 - https://www.facebook.com/USER_NAME/videos/USER_ALBUM/VIDEO_ID/?type=2&theater 
 - https://www.facebook.com/USER_NAME/videos/VIDEO_ID/?pnref=story
 
-### download
+### Download Method:
 
 ```php
 $isAsyncRequest = true;
-$downloader->download('path/to/src/file', '/path/to/destination/filename.mp4', $isAsyncRequest);
+$downloader->download('Remote_File_URL', '/path/to/destination/filename.mp4', $isAsyncRequest);
 ```
 
 ## Change log
