@@ -22,7 +22,7 @@ class Facebook extends Provider
         $id = '';
         if(is_int($url)) {
             $id = $url;
-        } elseif(preg_match('/(?:\w+\.\d+)?\/?(\d+)/i', $url, $matches)) {
+        } elseif(preg_match('/(?:\.?\d+)(?:\/videos)?\/?(\d+)?(?:[v]\=)?(\d+)?/i', $url, $matches)) {
             $id = $matches[1];
         }
 
