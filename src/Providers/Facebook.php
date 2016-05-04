@@ -5,14 +5,13 @@ namespace Irazasyed\VideoDownloader\Providers;
 use Irazasyed\VideoDownloader\Exceptions\VideoDownloaderException;
 
 /**
- * Class Facebook
- *
- * @package Irazasyed\VideoDownloader\Providers
+ * Class Facebook.
  */
 class Facebook extends Provider
 {
     /**
      * Generate URL based on Video ID/Link.
+     *
      * @param $url
      *
      * @return string
@@ -20,9 +19,9 @@ class Facebook extends Provider
     public function generateUrl($url)
     {
         $id = '';
-        if(is_int($url)) {
+        if (is_int($url)) {
             $id = $url;
-        } elseif(preg_match('/(?:\.?\d+)(?:\/videos)?\/?(\d+)?(?:[v]\=)?(\d+)?/i', $url, $matches)) {
+        } elseif (preg_match('/(?:\.?\d+)(?:\/videos)?\/?(\d+)?(?:[v]\=)?(\d+)?/i', $url, $matches)) {
             $id = $matches[1];
         }
 
@@ -35,8 +34,9 @@ class Facebook extends Provider
      *
      * @param $url
      *
-     * @return array
      * @throws VideoDownloaderException
+     *
+     * @return array
      */
     public function getVideoInfo($url)
     {
@@ -44,7 +44,7 @@ class Facebook extends Provider
 
         $title = $this->getTitle();
 
-        if(strtolower($title) === "sorry, this content isn't available at the moment") {
+        if (strtolower($title) === "sorry, this content isn't available at the moment") {
             throw new VideoDownloaderException('Video not available!');
         }
 
