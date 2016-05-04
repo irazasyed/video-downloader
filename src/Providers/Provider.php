@@ -3,16 +3,14 @@
 namespace Irazasyed\VideoDownloader\Providers;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Promise;
-use GuzzleHttp\RequestOptions;
-use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Promise;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\RequestOptions;
 use Irazasyed\VideoDownloader\Exceptions\VideoDownloaderException;
 
 /**
- * Abstract Provider
- *
- * @package Irazasyed\VideoDownloader\Providers
+ * Abstract Provider.
  */
 abstract class Provider implements ProviderInterface
 {
@@ -101,22 +99,19 @@ abstract class Provider implements ProviderInterface
 
         $status = $response->getStatusCode();
 
-        if($status === 200) {
+        if ($status === 200) {
             return $this->body = $response->getBody();
         }
 
         throw new VideoDownloaderException('Something went wrong, HTTP Status Code Returned: '.$status);
     }
 
-
     /**
      * Download remote file from server
      * and save it locally using HTTP Client.
      *
-     * @param string $url         The URL to Remote File to Download.
-     *
-     * @param string $dstFilename Destination Filename (Accepts File Path too).
-     *
+     * @param string $url            The URL to Remote File to Download.
+     * @param string $dstFilename    Destination Filename (Accepts File Path too).
      * @param bool   $isAsyncRequest
      *
      * @return string
@@ -134,7 +129,7 @@ abstract class Provider implements ProviderInterface
     }
 
     /**
-     * Make a HTTP Request
+     * Make a HTTP Request.
      *
      * @param            $url
      * @param array      $options
@@ -177,7 +172,7 @@ abstract class Provider implements ProviderInterface
     private function getOptions(array $headers, $options = [], $isAsyncRequest = false)
     {
         $default_options = [
-            RequestOptions::HEADERS => $headers,
+            RequestOptions::HEADERS     => $headers,
             RequestOptions::SYNCHRONOUS => !$isAsyncRequest,
         ];
 
@@ -192,13 +187,13 @@ abstract class Provider implements ProviderInterface
     protected function defaultHeaders()
     {
         return [
-            'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
-            'Accept-Language' => 'en-US,en;q=0.8,sr;q=0.6,pt;q=0.4'
+            'User-Agent'      => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+            'Accept-Language' => 'en-US,en;q=0.8,sr;q=0.6,pt;q=0.4',
         ];
     }
 
     /**
-     * Decode Unicode Sequences
+     * Decode Unicode Sequences.
      *
      * @param $str
      *
