@@ -1,10 +1,10 @@
-Video Downloader - [WIP] Experimental Project.
+Video Downloader
 ==============================================
 
+[![Join PHP Chat][ico-phpchat]][link-phpchat]
+[![Chat on Telegram][ico-telegram]][link-telegram]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -93,6 +93,8 @@ This project and its author is neither associated, nor affiliated with Facebook 
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+[ico-phpchat]: https://img.shields.io/badge/Slack-PHP%20Chat-5c6aaa.svg?style=flat-square&logo=slack&labelColor=4A154B
+[ico-telegram]: https://img.shields.io/badge/@PHPChatCo-2CA5E0.svg?style=flat-square&logo=telegram&label=Telegram
 [ico-version]: https://img.shields.io/packagist/v/irazasyed/video-downloader.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/irazasyed/video-downloader/master.svg?style=flat-square
@@ -100,6 +102,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/irazasyed/video-downloader.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/video-downloader.svg?style=flat-square
 
+[link-phpchat]: https://phpchat.co/?ref=video-downloader
+[link-telegram]: https://t.me/PHPChatCo
 [link-packagist]: https://packagist.org/packages/irazasyed/video-downloader
 [link-travis]: https://travis-ci.org/irazasyed/video-downloader
 [link-scrutinizer]: https://scrutinizer-ci.com/g/irazasyed/video-downloader/code-structure
